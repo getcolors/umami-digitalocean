@@ -70,7 +70,11 @@ digitalocean-https-sources:
 
 cloudflare-zone: bigconfig.online
 cloudflare-record-name: umami
-cloudflare-proxied: false
+# Serve through the Cloudflare proxy so the droplet's address is not published
+# in DNS. Note that ssh to the host name stops reaching the droplet once this
+# is on: converges are unaffected because Ansible uses the address OpenTofu
+# outputs, but an ad-hoc ssh needs the origin address.
+cloudflare-proxied: true
 
 # --- OpenTofu State Backend --------------------------------------------------
 

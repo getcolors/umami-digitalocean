@@ -1,6 +1,6 @@
 # Shared compute rollout
 
-Installed package: `getcolors/umami` at published revision `859b906ca3ba33ce80dffad7cd592432a11d800d`.
+Installed package: `getcolors/umami` at published revision `b3aa56fbdbd062229cf336b1ff08ada720d5de27`.
 The installed skill directories and root launchers were copied from a verified
 Skills CLI installation of that revision. This remains a manual installation; no lockfile was invented.
 
@@ -27,4 +27,4 @@ application health.
 
 Outstanding live-operation prerequisites:
 
-- Before any real operation, configure ssh-private-key-path for the existing external provider key. No identity path was guessed and no key mode was changed.
+- Before any real operation, verify working operator or SSH-agent access for the existing external provider key, or set ssh-private-key-path to its matching identity. No identity path was guessed and no key mode was changed.
